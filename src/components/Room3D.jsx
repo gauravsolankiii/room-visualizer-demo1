@@ -16,7 +16,7 @@ function Model({ url }) {
 // Main 3D Viewer Component
 function GLBViewer() {
   // Apni GLB file ka path yahan daalein
-  const modelUrl = "/path/to/your/model.glb";
+  const modelUrl = "/public/models/room.glb";
 
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
