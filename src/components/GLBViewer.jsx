@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useState, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Environment, Center } from "@react-three/drei";
 import * as THREE from "three";
-
+import Loader from "./Loader";
 // GLB Model Component
 function Model({ url, onObjectClick }) {
   const { scene } = useGLTF(url);
@@ -289,7 +289,7 @@ function GLBViewer() {
 
           <Environment preset="city" />
 
-          <Suspense fallback={null}>
+          <Suspense fallback={<Loader />}>
             <Center>
               <Model url={modelUrl} onObjectClick={handleObjectClick} />
             </Center>
